@@ -24,8 +24,10 @@
     "url": "https://github.com/heyjones/wpbp/issues"
   },
   "scripts": {
-    "dist": "npm run scripts || styles || images",
-    "scripts": "mkdir dist/scripts && uglifyjs assets/scripts/wpbp.js -o dist/scripts/wpbp.js --compress",
+    "predist": "rm -r dist",
+    "dist": "npm run scripts && npm run styles && npm run images",
+    "prescripts": "mkdir -p dist/scripts",
+    "scripts": "uglifyjs assets/scripts/wpbp.js -o dist/scripts/wpbp.js --compress",
     "styles": "node-sass assets/styles/wpbp.scss dist/styles/wpbp.css --output-style compressed",
     "images": "imagemin assets/images/* dist/images"
   },
