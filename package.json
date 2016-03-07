@@ -25,7 +25,7 @@
   },
   "scripts": {
     "dist": "npm run scripts || styles || images",
-    "scripts": "uglifyjs assets/scripts/wpbp.js dist/scripts/wpbp.js --compress ",
+    "scripts": "mkdir dist/scripts && uglifyjs assets/scripts/wpbp.js -o dist/scripts/wpbp.js --compress",
     "styles": "node-sass assets/styles/wpbp.scss dist/styles/wpbp.css --output-style compressed",
     "images": "imagemin assets/images/* dist/images"
   },
