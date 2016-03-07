@@ -1,0 +1,34 @@
+{
+  "name": "wpbp",
+  "version": "0.0.1",
+  "description": "WordPress Boilerplate",
+  "keywords": [
+    "WordPress",
+    "boilerplate",
+    "theme",
+    "template"
+  ],
+  "dependencies": {
+    "node-sass": "3.4.2",
+    "uglify-js": "2.6.2",
+    "imagemin-cli": "2.1.0"
+  },
+  "devDependencies": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/heyjones/wpbp"
+  },
+  "bugs": {
+    "email": "wpbp@heyjones.com",
+    "url": "https://github.com/heyjones/wpbp/issues"
+  },
+  "scripts": {
+    "dist": "npm run scripts || styles || images",
+    "scripts": "uglifyjs assets/scripts/wpbp.js dist/scripts/wpbp.js --compress ",
+    "styles": "node-sass assets/styles/wpbp.scss dist/styles/wpbp.css --output-style compressed",
+    "images": "imagemin assets/images/* dist/images"
+  },
+  "author": "Chris Jones <chris@heyjones.com> (http://heyjones.com)",
+  "license": "MIT"
+}
