@@ -7,8 +7,6 @@ add_action( 'wp_enqueue_style', array( $this, wpbp_enqueue_style ) );
 
 function wpbp_enqueue_scripts(){
   wp_deregister_script( 'jquery' );
-  wp_register_script( 'jquery', includes_url( '/js/jquery/jquery.js' ), false, NULL, true );
-  wp_register_script( 'wpbp', get_template_directory() . '/dist/scripts/wpbp.js', array( 'jquery' ), NULL, true );
-  wp_enqueue_script( 'wpbp' );
+  wp_enqueue_script( 'wpbp', get_template_directory() . '/dist/scripts/wpbp.js', array( 'jquery' ), NULL, true );
 }
 add_action( 'wp_enqueue_scripts', array( $this, wpbp_enqueue_scripts ) )

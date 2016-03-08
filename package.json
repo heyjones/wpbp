@@ -9,9 +9,10 @@
     "template"
   ],
   "dependencies": {
-    "node-sass": "3.4.2",
-    "uglify-js": "2.6.2",
-    "imagemin-cli": "2.1.0"
+    "node-sass": "^3.0.0",
+    "uglify-js": "^2.0.0",
+    "imagemin-cli": "^2.0.0",
+    "webpack": "^1.0.0"
   },
   "devDependencies": {
   },
@@ -24,10 +25,10 @@
     "url": "https://github.com/heyjones/wpbp/issues"
   },
   "scripts": {
-    "predist": "rm -r dist",
+    "predist": "rm -r -f dist",
     "dist": "npm run scripts && npm run styles && npm run images",
     "prescripts": "mkdir -p dist/scripts",
-    "scripts": "uglifyjs assets/scripts/wpbp.js -o dist/scripts/wpbp.js --compress",
+    "scripts": "webpack assets/scripts/wpbp.js dist/scripts/wpbp.js && uglifyjs dist/scripts/wpbp.js -o dist/scripts/wpbp.js --compress",
     "styles": "node-sass assets/styles/wpbp.scss dist/styles/wpbp.css --output-style compressed",
     "images": "imagemin assets/images/* dist/images"
   },
