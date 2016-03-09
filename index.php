@@ -10,8 +10,8 @@
 </head>
 <body>
 
-  <h1>WPBP</h1>
-  <p>A WordPress Boilerplate Theme</p>
+  <h1><?php echo bloginfo( 'name' ); ?></h1>
+  <p><?php echo bloginfo( 'description' ); ?></p>
 
   <?php
   if ( have_posts() ) {
