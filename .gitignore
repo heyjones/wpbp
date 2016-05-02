@@ -16,5 +16,6 @@ wp-content/plugins/hello.php
 /readme.html
 /license.txt
 
+bower_components/
 dist/
 node_modules/
