@@ -14,7 +14,8 @@
     "node-sass": "latest",
     "uglify-js": "latest",
     "imagemin-cli": "latest",
-    "webpack": "latest"
+    "webpack": "latest",
+    "icon-font-generator": "latest"
   },
   "repository": {
     "type": "git",
@@ -26,11 +27,13 @@
   },
   "scripts": {
     "predist": "rm -r -f dist",
-    "dist": "npm run scripts && npm run styles && npm run images",
+    "dist": "npm run scripts && npm run styles && npm run images && npm run icons",
     "prescripts": "mkdir -p dist/scripts",
     "scripts": "webpack assets/scripts/wpbp.js dist/scripts/wpbp.js && uglifyjs dist/scripts/wpbp.js -o dist/scripts/wpbp.js --compress",
     "styles": "node-sass assets/styles/wpbp.scss dist/styles/wpbp.css --output-style compressed",
-    "images": "imagemin assets/images/* dist/images"
+    "images": "imagemin assets/images/* dist/images",
+    "preicons": "mkdir -p dist/icons",
+    "icons": "icon-font-generator assets/icons/*.svg -o dist/icons -n wpbp -p wpbp"
   },
   "author": "Chris Jones <chris@heyjones.com> (http://heyjones.com)",
   "license": "MIT"
