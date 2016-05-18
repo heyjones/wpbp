@@ -9,12 +9,12 @@
     "template"
   ],
   "dependencies": {
-    "node-sass": "^3.0.0",
-    "uglify-js": "^2.0.0",
-    "imagemin-cli": "^2.0.0",
-    "webpack": "^1.0.0"
   },
   "devDependencies": {
+    "node-sass": "latest",
+    "uglify-js": "latest",
+    "imagemin-cli": "latest",
+    "webpack": "latest"
   },
   "repository": {
     "type": "git",
