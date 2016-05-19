@@ -7,7 +7,11 @@ A WordPress Boilerplate Theme
 
 3. Add js libraries to /assets/scripts and require in wpbp.js
 
-4. npm run dist
+4. Add image files to /assets/images
+
+5. Add svg files to /assets/icons
+
+6. npm run dist
 
 ## Template Heirarchy
 
