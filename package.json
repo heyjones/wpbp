@@ -33,7 +33,7 @@
     "styles": "node-sass assets/styles/wpbp.scss dist/styles/wpbp.css --output-style compressed",
     "images": "imagemin assets/images/* dist/images",
     "preicons": "mkdir -p dist/icons",
-    "icons": "icon-font-generator assets/icons/*.svg -o dist/icons -n wpbp -p wpbp"
+    "icons": "icon-font-generator assets/icons/*.svg -o dist/icons -n wpbp -p wpbp --html false --json false"
   },
   "author": "Chris Jones <chris@heyjones.com> (http://heyjones.com)",
   "license": "MIT"
