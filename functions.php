@@ -1,3 +1,3 @@
 <?php
 
-require_once( 'wpbp.php' );
+require get_template_directory() . '/wpdp.php';
