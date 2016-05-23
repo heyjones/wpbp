@@ -11,7 +11,7 @@ A WordPress Boilerplate Theme
 
 5. Add svg files to /assets/icons
 
-6. npm run dist
+6. npm run dist or dist:watch
 
 ## Template Heirarchy
 
