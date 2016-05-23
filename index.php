@@ -1,35 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title><?php wp_title(); ?></title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-  <?php wp_head(); ?>
-</head>
-<body>
+<?php get_header(); ?>
 
-  <h1><?php echo bloginfo( 'name' ); ?></h1>
-  <p><?php echo bloginfo( 'description' ); ?></p>
+<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-  <?php
-  if ( have_posts() ) {
-    while ( have_posts() ) {
-      the_post();
-      ?>
+  <h2><?php the_title(); ?></h2>
+  <?php the_content(); ?>
+  <a href="<?php the_permalink(); ?>">Permalink</a>
 
-      <h2><?php the_title(); ?></h2>
-      <?php the_content(); ?>
-      <a href="<?php the_permalink(); ?>">Permalink</a>
+<?php endwhile; endif; ?>
 
-      <?php
-    }
-  }
-  ?>
+<?php the_posts_pagination(); ?>
 
-  <?php the_posts_pagination(); ?>
-
-  <?php wp_footer(); ?>
-</body>
-</html>
+<?php get_footer(); ?>
