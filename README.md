@@ -1,37 +1,37 @@
 # wpbp
 A WordPress Boilerplate Theme
 
-## Install
+### Install
 
 ```bash
 $ npm install
 ```
 
-### Styles
+#### Styles
 
 Add sass libraries to /assets/styles and import in wpbp.scss
 
 https://github.com/sass/node-sass
 
-### Scripts
+#### Scripts
 
 Add js libraries to /assets/scripts and require in wpbp.js
 
 https://github.com/webpack/webpack
 
-### Images
+#### Images
 
 Add image files to /assets/images
 
 https://github.com/imagemin/imagemin-cli
 
-### Icons
+#### Icons
 
 Add svg files to /assets/icons
 
 https://github.com/Workshape/icon-font-generator
 
-## Build
+### Build
 
 ```bash
 $ npm run dist
@@ -43,24 +43,32 @@ or
 $ npm run dist:watch
 ```
 
-## Template Hierarchy
+### Template Hierarchy
 
 No need to learn some abstracted template logic, just use the native WordPress stuff.
 
 https://developer.wordpress.org/themes/basics/template-hierarchy/
 
-## Bower
+### Bower
 
 ```bash
-$ bower install \<package>
+$ bower install <package>
 ```
 
 http://bower.io/
 
-### Styles
+#### Styles
 
-Add *@import '../../bower_components/\<package>';* to wpbp.scss
+Add the following to wpbp.scss:
 
-### Scripts
+```scss
+@import '../../bower_components/<package>'
+```
 
-Add *require('../../bower_components/\<package>');* to wpbp.js
+#### Scripts
+
+Add the following to wpbp.js:
+
+```js
+require('../../bower_components/<package>');
+```
