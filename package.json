@@ -9,8 +9,6 @@
     "template"
   ],
   "dependencies": {
-  },
-  "devDependencies": {
     "node-sass": "latest",
     "uglify-js": "latest",
     "imagemin-cli": "latest",
