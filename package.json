@@ -28,7 +28,7 @@
     "prescripts": "mkdir -p dist/scripts",
     "scripts": "webpack assets/scripts/wpbp.js dist/scripts/wpbp.js && uglifyjs dist/scripts/wpbp.js -o dist/scripts/wpbp.js --compress",
     "styles": "node-sass assets/styles/wpbp.scss dist/styles/wpbp.css --output-style compressed",
-    "images": "imagemin assets/images/* dist/images",
+    "images": "imagemin assets/images/* --out-dir=dist/images",
     "preicons": "mkdir -p dist/icons",
     "icons": "icon-font-generator assets/icons/*.svg -o dist/icons -n wpbp -p wpbp --html false --json false",
     "predist": "rm -r -f dist",
