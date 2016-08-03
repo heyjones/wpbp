@@ -10,7 +10,6 @@
   ],
   "dependencies": {
     "node-sass": "latest",
-    "uglify-js": "latest",
     "imagemin-cli": "latest",
     "webpack": "latest",
     "icon-font-generator": "latest",
@@ -26,7 +25,7 @@
   },
   "scripts": {
     "prescripts": "mkdir -p dist/scripts",
-    "scripts": "webpack assets/scripts/wpbp.js dist/scripts/wpbp.js && uglifyjs dist/scripts/wpbp.js -o dist/scripts/wpbp.js --compress",
+    "scripts": "webpack assets/scripts/wpbp.js dist/scripts/wpbp.js -p",
     "styles": "node-sass assets/styles/wpbp.scss dist/styles/wpbp.css --output-style compressed",
     "images": "imagemin assets/images/* --out-dir=dist/images",
     "preicons": "mkdir -p dist/icons",
