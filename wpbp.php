@@ -11,13 +11,13 @@ if( !class_exists( 'wpbp' ) ){
 
     function wpbp_enqueue_scripts(){
       wp_deregister_script( 'jquery' );
-      wp_enqueue_style( 'wpbp-styles', get_template_directory_uri() . '/dist/styles/wpbp.css', NULL, filemtime( get_template_directory() . '/dist/styles/wpbp.css' ) );
-      wp_enqueue_style( 'wpbp-icons', get_template_directory_uri() . '/dist/icons/wpbp.css', NULL, filemtime( get_template_directory() . '/dist/icons/wpbp.css' ) );
-      wp_enqueue_script( 'wpbp-scripts', get_template_directory_uri() . '/dist/scripts/wpbp.js', NULL, filemtime( get_template_directory() . '/dist/scripts/wpbp.js' ), true );
+      if( file_exists( get_template_directory() . '/dist/styles/wpbp.css' ) ) wp_enqueue_style( 'wpbp-styles', get_template_directory_uri() . '/dist/styles/wpbp.css', NULL, filemtime( get_template_directory() . '/dist/styles/wpbp.css' ) );
+      if( file_exists( get_template_directory() . '/dist/icons/wpbp.css' ) ) wp_enqueue_style( 'wpbp-icons', get_template_directory_uri() . '/dist/icons/wpbp.css', NULL, filemtime( get_template_directory() . '/dist/icons/wpbp.css' ) );
+      if( file_exists( get_template_directory() . '/dist/scripts/wpbp.js' ) ) wp_enqueue_script( 'wpbp-scripts', get_template_directory_uri() . '/dist/scripts/wpbp.js', NULL, filemtime( get_template_directory() . '/dist/scripts/wpbp.js' ), true );
     }
 
   }
 
-  $wpbp = new wpbp();
+  new wpbp();
 
 }
