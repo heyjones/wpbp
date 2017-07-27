@@ -13,7 +13,7 @@
     "imagemin-cli": "latest",
     "webpack": "latest",
     "icon-font-generator": "latest",
-    "watch": "latest"
+    "npm-watch": "latest"
   },
   "repository": {
     "type": "git",
@@ -22,6 +22,27 @@
   "bugs": {
     "email": "wpbp@heyjones.com",
     "url": "https://github.com/heyjones/wpbp/issues"
+  },
+  "watch": {
+    "scripts": "assets/scripts/",
+    "styles": {
+      "patterns": [
+        "assets/styles"
+      ],
+      "extensions": "scss"
+    },
+    "images": {
+      "patterns": [
+        "assets/images"
+      ],
+      "extensions": "gif,jpg,jpeg,png,svg"
+    },
+    "icons": {
+      "patterns": [
+        "assets/icons"
+      ],
+      "extensions": "svg"
+    }
   },
   "scripts": {
     "prescripts": "mkdir -p dist/scripts",
@@ -32,7 +53,7 @@
     "icons": "icon-font-generator assets/icons/*.svg -o dist/icons -n wpbp -p wpbp --html false --json false",
     "predist": "rm -r -f dist",
     "dist": "npm run scripts && npm run styles && npm run images && npm run icons",
-    "dist:watch": "watch 'npm run dist' assets/"
+    "watch": "npm-watch"
   },
   "author": "Chris Jones <chris@heyjones.com> (http://heyjones.com)",
   "license": "MIT"
