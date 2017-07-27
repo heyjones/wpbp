@@ -40,7 +40,7 @@ $ npm run dist
 or
 
 ```bash
-$ npm run dist:watch
+$ npm run watch
 ```
 
 ### Template Hierarchy
