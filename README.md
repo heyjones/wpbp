@@ -33,11 +33,13 @@ https://www.npmjs.com/package/webpack-webfont
 
 ### Build
 
+Development
+
 ```bash
 $ npm run dev
 ```
 
-or
+Production
 
 ```bash
 $ npm run build
