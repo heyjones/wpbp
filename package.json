@@ -8,12 +8,19 @@
     "theme",
     "template"
   ],
-  "dependencies": {
-    "node-sass": "latest",
-    "imagemin-cli": "latest",
-    "webpack": "latest",
-    "icon-font-generator": "latest",
-    "npm-watch": "latest"
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-preset-env": "^1.6.0",
+    "copy-webpack-plugin": "^4.0.1",
+    "css-loader": "^0.28.4",
+    "extract-text-webpack-plugin": "^2.1.2",
+    "imagemin-webpack-plugin": "^1.4.4",
+    "node-sass": "^4.5.3",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.18.2",
+    "webpack": "^3.4.1",
+    "webpack-webfont": "0.0.1-alpha.7"
   },
   "repository": {
     "type": "git",
@@ -23,37 +30,9 @@
     "email": "wpbp@heyjones.com",
     "url": "https://github.com/heyjones/wpbp/issues"
   },
-  "watch": {
-    "scripts": "assets/scripts/",
-    "styles": {
-      "patterns": [
-        "assets/styles"
-      ],
-      "extensions": "scss"
-    },
-    "images": {
-      "patterns": [
-        "assets/images"
-      ],
-      "extensions": "gif,jpg,jpeg,png,svg"
-    },
-    "icons": {
-      "patterns": [
-        "assets/icons"
-      ],
-      "extensions": "svg"
-    }
-  },
   "scripts": {
-    "prescripts": "mkdir -p dist/scripts",
-    "scripts": "webpack assets/scripts/wpbp.js dist/scripts/wpbp.js -p",
-    "styles": "node-sass assets/styles/wpbp.scss dist/styles/wpbp.css --output-style compressed",
-    "images": "imagemin assets/images/* --out-dir=dist/images",
-    "preicons": "mkdir -p dist/icons",
-    "icons": "icon-font-generator assets/icons/*.svg -o dist/icons -n wpbp -p wpbp --html false --json false",
-    "predist": "rm -r -f dist",
-    "dist": "npm run scripts && npm run styles && npm run images && npm run icons",
-    "watch": "npm-watch"
+    "dev": "NODE_ENV=development webpack --watch --progress --hide-modules",
+    "build": "NODE_ENV=production webpack --progress --hide-modules"
   },
   "author": "Chris Jones <chris@heyjones.com> (http://heyjones.com)",
   "license": "MIT"
