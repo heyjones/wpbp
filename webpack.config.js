@@ -10,7 +10,8 @@ const path = require('path');
 
 module.exports = {
     entry: {
-        wpbp: ['./assets/scripts/wpbp.js', './assets/styles/wpbp.scss']
+        wpbp: ['./assets/scripts/wpbp.js', './assets/styles/wpbp.scss'],
+        admin: ['./assets/scripts/admin.js', './assets/styles/admin.scss']
     },
     output: {
         filename: './dist/scripts/[name].js'
